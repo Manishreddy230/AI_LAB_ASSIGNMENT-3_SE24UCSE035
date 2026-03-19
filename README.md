@@ -44,4 +44,4 @@ Military robots
 Real-time Sensors
 LIDAR / Camera detect obstacles
 Update map dynamically
-👉 This simulates UGV navigation with known obstacles
+ This simulates UGV navigation with known obstacles
