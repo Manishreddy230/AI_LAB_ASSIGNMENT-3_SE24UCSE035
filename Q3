@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define N 10
+
+int grid[N][N];
+
+int dx[] = {1,-1,0,0};
+int dy[] = {0,0,1,-1};
+
+typedef struct {
+    int x,y,g,h,f;
+} Node;
+
+int heuristic(int x1,int y1,int x2,int y2){
+    return abs(x1-x2)+abs(y1-y2);
+}
+
+int isValid(int x,int y){
+    return x>=0 && y>=0 && x<N && y<N && grid[x][y]==0;
+}
+
+void updateObstacle(int x,int y){
+    grid[x][y]=1;
+}
+
+int main(){
+    int sx=0,sy=0,gx=9,gy=9;
+
+    for(int i=0;i<N;i++)
+        for(int j=0;j<N;j++)
+            grid[i][j]=0;
+
+    updateObstacle(3,3);
+    updateObstacle(3,4);
+    updateObstacle(4,4);
+
+    printf("Dynamic A* path planning concept\n");
+    printf("Recalculate path when new obstacle appears\n");
+
+    return 0;
+}
