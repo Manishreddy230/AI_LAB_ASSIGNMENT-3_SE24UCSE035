@@ -3,7 +3,6 @@
 #include <math.h>
 
 #define N 10
-
 int grid[N][N];
 
 int dx[] = {1,-1,0,0};
