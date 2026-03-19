@@ -10,7 +10,6 @@ int minDistance(int dist[], int visited[]) {
             min = dist[v], min_index = v;
     return min_index;
 }
-
 void dijkstra(int graph[V][V], int src) {
     int dist[V], visited[V];
 
